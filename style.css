@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1{
+    font-size: 3rem;
+    padding-top: 3rem;
+}
+
+img,svg{
+    max-width: 100%;
+}
+
+
+svg{
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.intro{
+    width: min(40rem , 90%);
+    margin: 9rem auto;
+}
+
+.intro-date{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(221, 23, 23, 0.8);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.intro-date >  .days,.hours,.minutes,.seconds{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    font-size: 1rem; 
+    font-weight: bold;
+    color: white;
+}
+
+
+.day,.hour,.minute,.second{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+
+@media screen and (min-width:768px){
+    .intro-date >  .days,.hours,.minutes,.seconds{
+        font-size: 1.5rem;
+    }
+
+    .day,.hour,.minute,.second{
+        color: white;
+        font-weight: bold;
+        font-size: 3rem;
+        
+    }
+    
+}
+
