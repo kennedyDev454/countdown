@@ -21,7 +21,7 @@ function countdown() {
 function insertTime(day, hour, minutes, second) {
   intro.innerHTML = `
     <div class="days">
-        <span class="day">${day}</span>
+        <span class="day">${formatDate(day)}</span>
         <span>Days</span>
     </div>
     <div class="hours">
@@ -39,14 +39,10 @@ function insertTime(day, hour, minutes, second) {
     `;
 }
 
-function formatDate(value) {
-  if (value < 10) {
-    value = `0${value}`;
-  } else {
-    value = value;
-  }
 
-  return value;
+function formatDate(value) {
+ return  String(value).length === 1 ? `0${value}` : value
+
 }
 
 setInterval(countdown, 1000);
