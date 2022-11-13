@@ -1,8 +1,8 @@
 const days = document.querySelector(".day");
-const hours = document.querySelector(".hours");
-const minutes = document.querySelector(".minutes");
-const seconds = document.querySelector(".seconds");
-const intro = document.querySelector(".intro-date");
+const hours = document.querySelector(".hour");
+const minutes = document.querySelector(".minute");
+const seconds = document.querySelector(".second");
+
 
 function countdown() {
   const now = new Date();
@@ -19,24 +19,10 @@ function countdown() {
 }
 
 function insertTime(day, hour, minutes, second) {
-  intro.innerHTML = `
-    <div class="days">
-        <span class="day">${formatDate(day)}</span>
-        <span>Days</span>
-    </div>
-    <div class="hours">
-        <span class="hour">${formatDate(hour)}</span>
-        <span>Hours</span>
-    </div>
-    <div class="minutes">
-        <span class="minute">${formatDate(minutes)}</span>
-        <span>Minutes</span>
-    </div>
-    <div class="seconds">
-        <span class="second">${formatDate(second)}</span>
-        <span>Seconds</span>
-    </div>
-    `;
+   days.innerHTML = `${formatDate(day)}`
+   hours.innerHTML = `${formatDate(hour)}`
+   minutes.innerHTML = `${formatDate(minutes)}`
+   seconds.innerHTML = `${formatDate(second)}`
 }
 
 
